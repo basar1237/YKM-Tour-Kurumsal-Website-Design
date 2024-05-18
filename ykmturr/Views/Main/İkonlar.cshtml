@@ -1,0 +1,13 @@
+﻿@using ykmturr.Models.Sınıflar;
+@model List<icon>
+
+
+<div class="social">
+    @foreach (var x in Model)
+    {
+        <a href="@x.link"><i class="@x.ikon"></i></a>
+
+    }
+
+</div>
+

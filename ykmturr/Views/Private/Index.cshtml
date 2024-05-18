@@ -1,0 +1,102 @@
+﻿@using ykmturr.Models.Sınıflar
+@model List<Private>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ykmturlayout.cshtml";
+}
+<section class="about" id="about">
+    <div class="container">
+        <h3 class="heading">PRIVATE TRAVEL SERVICES</h3>
+        <div class="col-md-5 about_lef">
+
+
+        </div>
+        <div class="col-md-7 about_right">
+
+
+            @foreach (var x in Model)
+            {
+                <h4>@x.Baslik1</h4>
+                <p>@x.Aciklama1</p>
+            }
+
+            @foreach (var x in Model)
+            {
+
+                <h4>@x.Baslik2</h4>
+                <p>@x.Aciklama2</p>
+            }
+
+            @foreach (var x in Model)
+            {
+
+                <h4>@x.Baslik3</h4>
+                <p>@x.Aciklama3</p>
+            }
+
+
+        </div>
+        @Html.Action("PrivateAlt1", "Private")
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- submıt -->
+<section class="contact" id="contact">
+    <div class="container">
+        <h3 class="heading">Let's Plan Your Travel</h3>
+        <div class="contact-agileinfo">
+            <div class="col-md-10 contact-right">
+                <form action="#" method="post" runat="server">
+                    <div class="contact-agileinfo">
+
+                        <div class="form-group dropdown-group">
+                            <select id="reasonDropdown" name="reasonDropdown" required>
+                                <option value="" selected disabled>Lütfen başvuru nedeninizi seçiniz</option>
+                                <option value="OBTAIN_INFORMATION">Bilgi almak istiyorum</option>
+                                <option value="THANK">Teşekkür etmek istiyorum</option>
+                                <option value="NEGATIVE_EXPERIENCE">Olumsuz deneyimimi paylaşacağım</option>
+                                <option value="OTHER">Diğer</option>
+                            </select>
+                        </div>
+                        <input type="text" name="Name" placeholder="Travel Type" required="">
+                        <input type="text" name="Name" placeholder="Departure - Return Dates" required="">
+                        <input type="text" name="Name" placeholder="Name" required="">
+                        <input type="text" name="Name" placeholder="Surname" required="">
+                        <input type="text" name="Name" placeholder="Email" required="">
+                        <input type="text" name="Name" placeholder="Phone" required="">
+                        <textarea name="Message" placeholder="Message"></textarea>
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+

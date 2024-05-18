@@ -1,0 +1,41 @@
+﻿@using ykmturr.Models.Sınıflar
+@model List<İletisim>
+@{
+    ViewBag.Title = "İletisim";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Ad Soyad</th>
+        <th>Mail</th>
+        <th>Telefon</th>
+        <th>Mesaj</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.AdSoyad</td>
+            <td>@x.Mail</td>
+            <td>@x.Telefon</td>
+            <td>@x.Mesaj</td>
+
+
+            <td><a href="#" class="btn btn-danger">Sil</td>
+            <td><a href="#" class="btn btn-warning">Güncelle</td>
+            <td><a href="#" class="btn btn-default">Detaylar</td>
+
+        </tr>
+    }
+   
+
+  
+</table>
+ 

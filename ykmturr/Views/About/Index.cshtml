@@ -1,0 +1,167 @@
+﻿@using ykmturr.Models.Sınıflar
+@model List<Hakkımızda>
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_ykmturlayout.cshtml";
+}
+
+<!-- About section -->
+<section class="about" id="about">
+    <div class="container">
+        <h3 class="heading">About Us</h3>
+        <div class="col-md-5 about_left">
+
+
+        </div>
+        <div class="col-md-7 about_right">
+
+            <h3>Welcome to YKM TOURISM</h3>
+            @foreach (var x in Model)
+            {
+
+                <h4>@x.Baslik1</h4>
+                <p>@x.Aciklama1</p>
+            }
+            @foreach (var x in Model)
+            {
+
+                <h4>@x.Baslik2</h4>
+                <p>@x.Aciklama2</p>
+            }
+            @foreach (var x in Model)
+            {
+
+                <h4>@x.Baslik3</h4>
+                <p>@x.Aciklama3</p>
+            }
+            @foreach (var x in Model)
+            {
+
+                <h4>@x.Baslik4</h4>
+                <p>@x.Aciklama4</p>
+            }
+            @foreach (var x in Model)
+            {
+
+                <h4>@x.Baslik5</h4>
+                <p>@x.Aciklama5</p>
+            }
+
+            <ul>
+                <li><a href="contactus.aspx" class="w3l scroll">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+
+    </div>
+</section>
+<!-- //About section -->
+
+<section class="w3l-call-to-action_9">
+    <div class="call-w3">
+        <div class="container">
+            <div class="booking-form-content">
+                <div class="main-titles-head ">
+                    <div class="h3-container">
+                        <h3 class="header-name">OUR PARTNERS & SUPPLIERS</h3>
+
+                    </div>
+                    <p class="tiltle-para editContent ">
+                    </p>
+                </div>
+                <div class="row text-center">
+                    <div class="col-lg-4 col-md-6 propClone about-line-top ">
+                        <div class="area-box color-white editContent box-active">
+                            <div class="icon-back"><span class="fa fa-thumbs-up"></span></div>
+
+                            <h5>
+                                <a href="blog.html" class="editContent">
+                                    Belmond
+                                </a>
+                            </h5>
+                            <p class="para editContent">
+                                Sit amet consect etur adipi sicing elit. Rem quib usdam corporis, dolores
+                                quos, nobis culpa est
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 propClone about-line-top ">
+                        <div class="area-box color-white editContent">
+                            <div class="icon-back"><span class="fa fa-users"></span></div>
+
+                            <h5>
+                                <a href="blog.html" class="editContent">
+                                    Expert Teachers
+                                </a>
+                            </h5>
+                            <p class="para editContent">
+                                Sit amet consect etur adipi sicing elit. Rem quib usdam corporis, dolores
+                                quos, nobis culpa est
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 propClone about-line-top">
+                        <div class="area-box color-white editContent box-active">
+                            <div class="icon-back"><span class="fa fa-pencil"></span></div>
+
+                            <h5>
+                                <a href="blog.html" class="editContent">
+                                    Learn Anything
+                                </a>
+                            </h5>
+                            <p class="para editContent">
+                                Sit amet consect etur adipi sicing elit. Rem quib usdam corporis, dolores
+                                quos, nobis culpa est
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 propClone about-line-top ">
+                        <div class="area-box color-white editContent">
+                            <div class="icon-back"><span class="fa fa-book"></span></div>
+
+                            <h5>
+                                <a href="blog.html" class="editContent">
+                                    Many Courses
+                                </a>
+                            </h5>
+                            <p class="para editContent">
+                                Sit amet consect etur adipi sicing elit. Rem quib usdam corporis, dolores
+                                quos, nobis culpa est
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 propClone about-line-top ">
+                        <div class="area-box color-white editContent box-active">
+                            <div class="icon-back"><span class="fa fa-star"></span></div>
+
+                            <h5>
+                                <a href="blog.html" class="editContent">
+                                    Bright Future
+                                </a>
+                            </h5>
+                            <p class="para editContent">
+                                Sit amet consect etur adipi sicing elit. Rem quib usdam corporis, dolores
+                                quos, nobis culpa est
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 propClone about-line-top ">
+                        <div class="area-box color-white editContent">
+                            <div class="icon-back"><span class="fa fa-check"></span></div>
+
+                            <h5>
+                                <a href="blog.html" class="editContent">
+                                    Verified Course
+                                </a>
+                            </h5>
+                            <p class="para editContent">
+                                Sit amet consect etur adipi sicing elit. Rem quib usdam corporis, dolores
+                                quos, nobis culpa est
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

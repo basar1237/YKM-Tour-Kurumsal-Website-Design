@@ -1,0 +1,49 @@
+﻿@model ykmturr.Models.Sınıflar.Corporate
+@{
+    ViewBag.Title = "CorporateGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Corporate Güncelleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("CorporateGuncelle", "Admin", FormMethod.Post))
+{
+
+    <form class="form-group" method="post">
+        @Html.LabelFor(x => x.ID)
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+        <br />
+        @Html.LabelFor(x => x.Baslik1)
+        @Html.TextBoxFor(x => x.Baslik1, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(x => x.Aciklama1)
+        @Html.TextAreaFor(x => x.Aciklama1, 5, 1, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(x => x.Baslik2)
+        @Html.TextBoxFor(x => x.Baslik2, new { @class = "form-control" })
+
+        <br />
+        @Html.LabelFor(x => x.Aciklama2)
+        @Html.TextAreaFor(x => x.Aciklama2, 5, 1, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(x => x.Baslik3)
+        @Html.TextAreaFor(x => x.Baslik3, new { @class = "form-control" })
+
+        <br />
+        @Html.LabelFor(x => x.Aciklama3)
+        @Html.TextAreaFor(x => x.Aciklama3, 5, 1, new { @class = "form-control" })
+        <br />
+
+        @Html.LabelFor(x => x.FotoUrl)
+        @Html.TextBoxFor(x => x.FotoUrl, new { @class = "form-control" })
+        <br />
+
+
+        <button class="btn btn-primary">Güncelle </button>
+    </form>
+
+
+
+}
+
+

@@ -1,0 +1,43 @@
+﻿@using ykmturr.Models.Sınıflar
+@model List<Corporate>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ykmturlayout.cshtml";
+}
+
+
+<!-- About section -->
+<section class="about" id="about">
+    <div class="container">
+        <h3 class="heading">CORPORATE TRAVEL SERVICES</h3>
+        <div class="col-md-5 about_le">
+
+
+        </div>
+        <div class="col-md-7 about_right">
+
+
+            @foreach (var x in Model)
+            {
+                <h4>@x.Baslik1</h4>
+                <p>@x.Aciklama1</p>
+
+
+            }
+            @foreach(var x in Model)
+            {
+                <h4>@x.Baslik2</h4>
+                <p>@x.Aciklama2</p>
+            }
+            @foreach(var x in Model)
+            {
+                <h4>@x.Baslik3</h4>
+                <p>@x.Aciklama3</p>
+            }
+            </div>
+
+        <div class="clearfix"></div>
+
+    </div>
+
+

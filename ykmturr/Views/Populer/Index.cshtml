@@ -1,0 +1,382 @@
+﻿@using ykmturr.Models.Sınıflar
+@model List<Populer>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ykmturlayout.cshtml";
+}
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Hotelier - Hotel HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet   -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="~/webb/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="~/webb/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/webb/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="~/web/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="~/webb/css/style.css" rel="stylesheet">
+</head>
+
+<!-- Room Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h3 class="heading">Explore Our Popular Packages</h3>
+            
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="room-item shadow rounded overflow-hidden">
+                    <div class="position-relative">
+                        @foreach (var x in Model)
+                        {
+                            <img class="img-fluid" src="@x.FotoUrl1" alt="">
+
+                        }
+
+                        <div class="position-relative">
+                            @foreach (var x in Model)
+                            {
+                                <div>
+                                    <small class="@x.ikon">$@x.fiyat1/Night</small>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="p-4 mt-2">
+                        <div class="d-flex justify-content-between mb-3">
+                            @foreach (var x in Model)
+                            {
+
+                                <h5>@x.Baslik1</h5>
+                            }
+                            <div class="ps-2">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            @foreach (var x in Model)
+                            {
+                            <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>@x.yatak1 Bed</small>
+                            <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>@x.banyo1 Bath</small>
+                            <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                            }
+                        </div>
+                        <p class="text-body mb-3">
+                            @foreach (var x in Model)
+                            { 
+                                          @x.Aciklama1
+                                }</p>
+                        <div class="d-flex justify-content-between">
+                            @foreach (var x in Model)
+                            {
+                            <a class="btn btn-sm btn-primary rounded py-2 px-4" href="@x.view1">View Details</a>
+                            <a class="btn btn-sm btn-dark rounded py-2 px-4" href="@x.Book1">Book Now</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="room-item shadow rounded overflow-hidden">
+                    <div class="position-relative">
+                        @foreach (var x in Model)
+                        {
+                            <img class="img-fluid" src="@x.FotoUrl2" alt="">
+
+                        }
+                        @foreach (var x in Model)
+                        {
+                            <div>
+                                <small class="@x.ikon">$@x.fiyat2/Night</small>
+                            </div>
+                        }
+                    </div>
+                    <div class="p-4 mt-2">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h5 class="mb-0">
+                                @foreach (var x in Model)
+                                {
+                                    @x.Baslik2
+                                }
+                            </h5>
+                            <div class="ps-2">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            @foreach (var x in Model)
+                            {
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>@x.yatak2 Bed</small>
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>@x.banyo2 Bath</small>
+                                <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                            }
+                        </div>
+                        <p class="text-body mb-3">
+                            @foreach (var x in Model)
+                            {
+                            <p>@x.Aciklama2</p>
+                        }</p>
+                    <div class="d-flex justify-content-between">
+                        @foreach (var x in Model)
+                        {
+                            <a class="btn btn-sm btn-primary rounded py-2 px-4" href="@x.view2">View Details</a>
+                            <a class="btn btn-sm btn-dark rounded py-2 px-4" href="@x.Book2">Book Now</a>
+                        }
+                    </div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="room-item shadow rounded overflow-hidden">
+                    <div class="position-relative">
+                        @foreach (var x in Model)
+                        {
+                            <img class="img-fluid" src="@x.FotoUrl3" alt="">
+
+                        }
+                        @foreach (var x in Model)
+                        {
+                            <div>
+                                <small class="@x.ikon">$@x.fiyat3/Night</small>
+                            </div>
+                        }
+                    </div>
+                    <div class="p-4 mt-2">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h5 class="mb-0">
+                                @foreach (var x in Model)
+                                {
+                                    @x.Baslik3
+                                }
+                            </h5>
+                            <div class="ps-2">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            @foreach (var x in Model)
+                            {
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>@x.yatak3 Bed</small>
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>@x.banyo3 Bath</small>
+                                <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                            }
+                        </div>
+                        <p class="text-body mb-3">
+                            @foreach (var x in Model)
+                            {
+                                @x.Aciklama3
+                            }
+                        </p>
+                        <div class="d-flex justify-content-between">
+                            @foreach (var x in Model)
+                            {
+                                <a class="btn btn-sm btn-primary rounded py-2 px-4" href="@x.view3">View Details</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="@x.Book3">Book Now</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="room-item shadow rounded overflow-hidden">
+                    <div class="position-relative">
+                        @foreach (var x in Model)
+                        {
+                            <img class="img-fluid" src="@x.FotoUrl4" alt="">
+
+                        }
+                        @foreach (var x in Model)
+                        {
+                            <div>
+                                <small class="@x.ikon">$@x.fiyat4/Night</small>
+                            </div>
+                        }
+                    </div>
+                    <div class="p-4 mt-2">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h5 class="mb-0">
+                                @foreach (var x in Model)
+                                {
+                                    @x.Baslik4
+                                }
+                            </h5>
+                            <div class="ps-2">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            @foreach (var x in Model)
+                            {
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>@x.yatak4 Bed</small>
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>@x.banyo4 Bath</small>
+                                <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                            }
+                        </div>
+                        <p class="text-body mb-3">
+                            @foreach (var x in Model)
+                            {
+                                @x.Aciklama4
+                            }
+                        </p>
+                        <div class="d-flex justify-content-between">
+                            @foreach (var x in Model)
+                            {
+                                <a class="btn btn-sm btn-primary rounded py-2 px-4" href="@x.view4">View Details</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="@x.Book4">Book Now</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="room-item shadow rounded overflow-hidden">
+                    <div class="position-relative">
+                        @foreach (var x in Model)
+                        {
+                            <img class="img-fluid" src="@x.FotoUrl5" alt="">
+
+                        }
+                        @foreach (var x in Model)
+                        {
+                            <div>
+                                <small class="@x.ikon">$@x.fiyat5/Night</small>
+                            </div>
+                        }
+                    </div>
+                    <div class="p-4 mt-2">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h5 class="mb-0">
+                                @foreach (var x in Model)
+                                {
+                                    @x.Baslik5
+                                }
+                            </h5>
+                            <div class="ps-2">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            @foreach (var x in Model)
+                            {
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>@x.yatak5 Bed</small>
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>@x.banyo5 Bath</small>
+                                <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                            }
+                        </div>
+                        <p class="text-body mb-3">
+                            @foreach (var x in Model)
+                            {
+                                @x.Aciklama5
+                            }
+                        </p>
+                        <div class="d-flex justify-content-between">
+                            @foreach (var x in Model)
+                            {
+                                <a class="btn btn-sm btn-primary rounded py-2 px-4" href="@x.view5">View Details</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="@x.Book5">Book Now</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="room-item shadow rounded overflow-hidden">
+                    <div class="position-relative">
+                        @foreach (var x in Model)
+                        {
+                            <img class="img-fluid" src="@x.FotoUrl6" alt="">
+
+                        }
+                        @foreach (var x in Model)
+                        {
+                            <div>
+                                <small class="@x.ikon">$@x.fiyat6/Night</small>
+                            </div>
+                        }
+                    </div>
+                    <div class="p-4 mt-2">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h5 class="mb-0">
+                                @foreach (var x in Model)
+                                {
+                                    @x.Baslik6
+                                }
+                            </h5>
+                            <div class="ps-2">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            @foreach (var x in Model)
+                            {
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>@x.yatak6 Bed</small>
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>@x.banyo6 Bath</small>
+                                <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                            }
+                        </div>
+                        <p class="text-body mb-3">
+                            @foreach (var x in Model)
+                            {
+                                @x.Aciklama6
+                            }
+                        </p>
+                        <div class="d-flex justify-content-between">
+                            @foreach (var x in Model)
+                            {
+                                <a class="btn btn-sm btn-primary rounded py-2 px-4" href="@x.view6">View Details</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="@x.Book6">Book Now</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
